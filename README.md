@@ -1,6 +1,6 @@
 # pusuing-smooth-pursuits-poster
 This repository contains my final report for the research master internship 2023 at University of Amsterdam and the corresponding poster. 
-Additionally, I summarize some of the findings below. 
+Additionally, I summarize some of the findings below. My supervisors for this internship were [Ingmar Visser](https://www.uva.nl/profiel/v/i/i.visser/i.visser.html) and [Simon Kucharský](https://www.uva.nl/en/profile/k/u/s.kucharsky/s.kucharsky.html)
 
 # File overview
 - *PSP_report.pdf* - My final internship report 
@@ -10,7 +10,7 @@ Additionally, I summarize some of the findings below.
 Human experts and classification algorithms often confuse fixations (fixating stationary targets) and smooth pursuits (fixating moving targets) because their feature characteristics overlap. To investigate the gazeHMM algorithm by Lüken et al. (2022) and to explore better features, I created a ground truth data set that does not rely on human annotation. The data set consists of almost four hours of eye movements. Ten participants fixated different targets designed to induce saccades, fixations, and smooth pursuits. Ground truth was established by avoiding fixations and smooth pursuits to cooccur and separating them from saccades by their velocity. Visual inspection revealed that gazeHMM confused fixations and smooth pursuits likely because their velocity, acceleration, and sample-to-sample angle were distributed similarly. In contrast, I developed two features based on findings that directions within smooth pursuits are more similar than within fixations. The estimated direction deviation and estimated direction deviation spread clearly distinguished between fixations and smooth pursuits in the current data set. Therefore, they could likely improve the automatic classification of these eye movements, which is particularly relevant for the study of cognition and neurodegenerative diseases.
 
 # Summary of results
-The following is a short overview of the results but I strongly encourage you to read the full paper for all results and better context. 
+The following is a short overview of the results but I strongly encourage you to read the full paper for all results and better context.
 
 ## Benchmark data without human annotation
 We collected almost four hours of eye movements from ten fellow research master students at the University of Amsterdam. Each participant went through 144 trials in which they had to fixate a (moving) dot. Between trials we manipulated the speed (1, 3, and 6 degrees per seconds), the trajectory (horizontal- lefgt/right, vertical- up/down, diagonal- left/right and up/down) and the movement pattern (jumping circles, moving circles, back-and-forth circles). Each participant saw each combination of these factors twice for a total of 144 trials (3x3x8x2). As the dataset is partially meant for algorithm development, we randomly split participants between a training (n = 7) and test set (n=3). The following results are based on the seven participants in the training set. 
