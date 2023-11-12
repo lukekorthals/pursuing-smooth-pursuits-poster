@@ -15,7 +15,21 @@ The following is a short overview of the results but I strongly encourage you to
 ## Benchmark data without human annotation
 We collected almost four hours of eye movements from ten fellow research master students at the University of Amsterdam. Each participant went through 144 trials in which they had to fixate a (moving) dot. Between trials we manipulated the speed (1, 3, and 6 degrees per seconds), the trajectory (horizontal- lefgt/right, vertical- up/down, diagonal- left/right and up/down) and the movement pattern (jumping circles, moving circles, back-and-forth circles). Each participant saw each combination of these factors twice for a total of 144 trials (3x3x8x2). As the dataset is partially meant for algorithm development, we randomly split participants between a training (n = 7) and test set (n=3). The following results are based on the seven participants in the training set. 
 
-Like algorithms, human experts often struggle to distinguish smooth pursuits from other eye movements and it is questionable whether their annotations represent a true gold standard (Andersson et al., 2017; Hooge et al., 2018). Therefore, we designed three different stimuli to evoke specific eye movements. Specifically, we manipulated each trial such that only one type of slow eye movement (i.e., fixations or smooth pursuits) and saccades - fast eye movements - could cooccur. Subsequently, we distinguished slow and fast eye movements based on dynamic velocity thresholds to create benchmark labels without relying on human annotation. This procedure is not perfect and limitations are discussed in the paper. However, there is strong evidence - also discussed in the paper - that the manipulation and subsequent classification were sucessful. Below are three gifs, illustrating the different types of stimuli. 
+Like algorithms, human experts often struggle to distinguish smooth pursuits from other eye movements and it is questionable whether their annotations represent a true gold standard (Andersson et al., 2017; Hooge et al., 2018). Therefore, we designed three different stimuli to evoke specific eye movements. Specifically, we manipulated each trial such that only one type of slow eye movement (i.e., fixations or smooth pursuits) and saccades - fast eye movements - could cooccur. Subsequently, we distinguished slow and fast eye movements based on dynamic velocity thresholds to create benchmark labels without relying on human annotation. This procedure is not perfect and limitations are discussed in the paper. However, there is strong evidence - also discussed in the paper - that the manipulation and subsequent classification were sucessful. Below are three videos, illustrating the different types of stimuli. 
+
+Note that these videos were captured on a different monitor from the one used during the study and cropped. Additionally, frames were lost during video capturing. Thus, these videos are not representative of the true conditions during the study and are only supposed to illustrate the three different movement patterns we used. 
+
+https://github.com/lukekorthals/pusuing-smooth-pursuits-poster/assets/55378727/78961f78-115b-45d1-8c9d-8897d96319c3
+
+*Note.* This video shows the jumping circle stimulus at 3 degrees per second on a horizontal trajectory from left to right. This stimulus was supposed to evoke a series of fixations and saccades. 
+
+https://github.com/lukekorthals/pusuing-smooth-pursuits-poster/assets/55378727/39b46c37-ff49-49de-9cba-9985bdd6d373
+
+*Note.* This video shows the moving circle stimulus at 3 degrees per second on a horizontal trajectory from left to right. This stimulus was supposed to evoke consistent smooth pursuits.
+
+https://github.com/lukekorthals/pusuing-smooth-pursuits-poster/assets/55378727/98153e76-0d3f-4f07-be94-ea1f03cfc60e
+
+*Note.* This video shows the back-and-forth circle stimulus at 3 degrees per second on a horizontal trajectory from left to right. This stimulus was supposed to evoke a series of smooth pursuits and saccades.
 
 ## Recent event classifcation algorithms fail to distinguish fixations and smooth pursuits
 Consistent with findings by Lüken et al. (2022), their recent event classification algorithm gazeHMM failed to reliably distinguish fixations from smooth pursuits and rapidly switched between them in the current data set. The plot below shows one example of this and more are reported in the paper. 
