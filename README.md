@@ -20,14 +20,14 @@ Like algorithms, human experts often struggle to distinguish smooth pursuits fro
 ## Recent event classifcation algorithms fail to distinguish fixations and smooth pursuits
 Consistent with findings by Lüken et al. (2022), their recent event classification algorithm gazeHMM failed to reliably distinguish fixations from smooth pursuits and rapidly switched between them in the current data set. The plot below shows one example of this and more are reported in the paper. 
 
-![Figure 1](f7bb2338_126.png)
+<img src="f7bb2338_126.png" alt="figure 1" width="800"/>
 
 *Note.* This plot shows trial 126 for participant f7bb2338. In this jumping circle trial, the target jumped 6° at 1000ms intervals along a vertical trajectory from the bottom to the top. According to the baseline this was a clear series of fixations and saccades. gazeHMM classified no saccades and switched rapidly between fixations and smooth pursuits.
 
 ## gazeHMM features have similar distributions for fixations and smooth pursuits
 The velocity, acceleration, and sample-to-sample angles of fixations and smooth pursuits are distributed very similarly. As gazeHMM relies on these three features to classify different eye movements, this overlap likely explains why it fails at reliably classifying them. This is especially the case for slow smooth pursuits (1 and 3 degrees per second). As an example, the plot below shows the velocity of fixations and smooth pursuits across all trials of a given speed of all participants in the training set. For all target speeds, there is a lot of overlap but less so for faster target speeds. This explains, why algorithms particularly struggle with slow smooth pursuits. 
 
-![Figure 2](all_participants_velocity_luek_speed_facets_no_sac.png)
+<img src="all_participants_velocity_luek_speed_facets_no_sac.png" alt="figure 2" width="800"/>
 
 *Note.* These plots show velocity densities for fixations (red), and smooth pursuits (blue) for targets moving 1°/s (top), 3°/s (middle), and 6°/s (bottom). They are based on all 336 trials of a given speed included in the training set. Distributions for fixations and smooth pursuits are very similar, but less so for faster targets. 
 The x axes are broken to focus the plots on the area where most densities are.
@@ -35,7 +35,7 @@ The x axes are broken to focus the plots on the area where most densities are.
 ## New features based on the direction deviation look promising
 Based on exploratory findings by Startsev et al. (2019) we developed two new features. The estimated direction deviation (EDD) and estimated direction deviation spread (EDD-S) are based on the idea that smooth pursuits follow a consistent trajectory from which the angles of individual samples deviate less than fixations which should be relatively randomly distributed. Both features show less overlap for fixations and smooth pursuits and thus are promising candidates to improve gazeHMM by Lüken et al. (2022) or to be used in novel algorithms. The plot below shows the distribution of the EDD-S feature at different target speeds for all trials in the training set. As can be seen, the overlap between fixations and smooth pursuits is less than on the velocity feature above especially for faster smooth pursuits. I highly encourage to have a look at the paper for a more detailed explanation of these features.
 
-![Figure 3](all_participants_EDD_S_speed_facets.png)
+<img src="all_participants_EDD_S_speed_facets.png" alt="figure 3" width="800"/>
 
 *Note.* These plots show estimated direction deviation spread densities for fixations (red), and smooth pursuits (blue) for targets moving 1°/s (top), 3°/s (middle), and 6°/s (bottom). They are based on all 336 trials of a given speed included in the training set. Distributions for fixations are clearly distinct from those of saccades and smooth pursuits for all target speeds.
 The x axes are broken to focus the plots on the area with the highest densities.
