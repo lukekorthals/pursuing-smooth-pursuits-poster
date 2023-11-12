@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Please cite it as below."
+preferred-citation:
+  type: unpublished
+  authors:
+  - family-names: "Korthals"
+    given-names: "Luke"
+    orcid: "https://orcid.org/0009-0006-2098-8679"
+title: "Pusuing Smooth Pursuits UvA Research Master Poster Conference"
+date-released: 2023-11-17
+url: "https://github.com/lukekorthals/pusuing-smooth-pursuits-poster"
