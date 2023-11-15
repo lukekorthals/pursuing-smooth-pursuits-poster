@@ -1,6 +1,6 @@
 # pursuing-smooth-pursuits-poster
 This repository contains my final report for the research master internship 2023 at University of Amsterdam and the corresponding poster. 
-Additionally, I summarize some of the findings below. My supervisors for this internship were [Ingmar Visser](https://www.uva.nl/profiel/v/i/i.visser/i.visser.html) and [Simon Kucharský](https://www.uva.nl/en/profile/k/u/s.kucharsky/s.kucharsky.html)
+Additionally, I summarize some of the findings below. My supervisors for this internship were [Ingmar Visser](https://www.uva.nl/profiel/v/i/i.visser/i.visser.html) and [Simon Kucharský](https://www.uva.nl/en/profile/k/u/s.kucharsky/s.kucharsky.html).
 
 # File overview
 - *PSP_report.pdf* - My final internship report 
